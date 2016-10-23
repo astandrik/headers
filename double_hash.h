@@ -35,7 +35,7 @@ struct double_hash {
     if(cells[index].key == key) {
       return cells[index].element;
     }
-    while(!cells[index].isNull && !cells[index].isDeleted && i < m) {
+    while(!cells[index].isNull && i < m) {
       i++;
       index = (h1 + i * h2) % size;
       if(cells[index].key == key) {
